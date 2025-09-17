@@ -1,0 +1,100 @@
+{"id": "ex0", "rhr": 65, "hrv": 80, "sleep_efficiency": 0.65, "total_sleep": 7.4, "steps": 2386, "subjective_stress": "high", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex1", "rhr": 66, "hrv": 57, "sleep_efficiency": 0.62, "total_sleep": 6.8, "steps": 1814, "subjective_stress": "low", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex2", "rhr": 68, "hrv": 24, "sleep_efficiency": 0.68, "total_sleep": 7.0, "steps": 2168, "subjective_stress": "high", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex3", "rhr": 62, "hrv": 60, "sleep_efficiency": 0.82, "total_sleep": 8.8, "steps": 10655, "subjective_stress": "high", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex4", "rhr": 56, "hrv": 34, "sleep_efficiency": 0.62, "total_sleep": 8.4, "steps": 5944, "subjective_stress": "med", "journal_text": "Slept great. Easy run planned."}
+{"id": "ex5", "rhr": 72, "hrv": 27, "sleep_efficiency": 0.8, "total_sleep": 7.0, "steps": 12373, "subjective_stress": "low", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex6", "rhr": 73, "hrv": 56, "sleep_efficiency": 0.82, "total_sleep": 6.2, "steps": 10174, "subjective_stress": "high", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex7", "rhr": 73, "hrv": 23, "sleep_efficiency": 0.82, "total_sleep": 6.7, "steps": 9911, "subjective_stress": "med", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex8", "rhr": 69, "hrv": 57, "sleep_efficiency": 0.92, "total_sleep": 6.1, "steps": 5270, "subjective_stress": "low", "journal_text": "Slept great. Easy run planned."}
+{"id": "ex9", "rhr": 57, "hrv": 56, "sleep_efficiency": 0.71, "total_sleep": 6.7, "steps": 6827, "subjective_stress": "high", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex10", "rhr": 64, "hrv": 58, "sleep_efficiency": 0.94, "total_sleep": 5.0, "steps": 8050, "subjective_stress": "low", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex11", "rhr": 59, "hrv": 79, "sleep_efficiency": 0.77, "total_sleep": 4.7, "steps": 12148, "subjective_stress": "low", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex12", "rhr": 65, "hrv": 64, "sleep_efficiency": 0.72, "total_sleep": 6.7, "steps": 8674, "subjective_stress": "low", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex13", "rhr": 63, "hrv": 50, "sleep_efficiency": 0.84, "total_sleep": 4.8, "steps": 13179, "subjective_stress": "high", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex14", "rhr": 75, "hrv": 56, "sleep_efficiency": 0.95, "total_sleep": 8.2, "steps": 5862, "subjective_stress": "high", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex15", "rhr": 76, "hrv": 42, "sleep_efficiency": 0.61, "total_sleep": 6.6, "steps": 3953, "subjective_stress": "high", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex16", "rhr": 70, "hrv": 23, "sleep_efficiency": 0.68, "total_sleep": 5.8, "steps": 13297, "subjective_stress": "low", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex17", "rhr": 67, "hrv": 78, "sleep_efficiency": 0.9, "total_sleep": 4.9, "steps": 8559, "subjective_stress": "med", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex18", "rhr": 59, "hrv": 72, "sleep_efficiency": 0.75, "total_sleep": 7.0, "steps": 12773, "subjective_stress": "med", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex19", "rhr": 76, "hrv": 76, "sleep_efficiency": 0.73, "total_sleep": 5.5, "steps": 2559, "subjective_stress": "low", "journal_text": "Slept great. Easy run planned."}
+{"id": "ex20", "rhr": 62, "hrv": 62, "sleep_efficiency": 0.68, "total_sleep": 6.7, "steps": 10852, "subjective_stress": "low", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex21", "rhr": 64, "hrv": 20, "sleep_efficiency": 0.65, "total_sleep": 6.9, "steps": 11191, "subjective_stress": "high", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex22", "rhr": 59, "hrv": 64, "sleep_efficiency": 0.9, "total_sleep": 8.8, "steps": 11930, "subjective_stress": "high", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex23", "rhr": 69, "hrv": 77, "sleep_efficiency": 0.9, "total_sleep": 8.8, "steps": 12350, "subjective_stress": "high", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex24", "rhr": 67, "hrv": 45, "sleep_efficiency": 0.74, "total_sleep": 6.7, "steps": 7760, "subjective_stress": "low", "journal_text": "Slept great. Easy run planned."}
+{"id": "ex25", "rhr": 57, "hrv": 33, "sleep_efficiency": 0.75, "total_sleep": 5.0, "steps": 11042, "subjective_stress": "low", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex26", "rhr": 55, "hrv": 56, "sleep_efficiency": 0.65, "total_sleep": 5.0, "steps": 7157, "subjective_stress": "high", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex27", "rhr": 57, "hrv": 75, "sleep_efficiency": 0.67, "total_sleep": 6.2, "steps": 11594, "subjective_stress": "med", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex28", "rhr": 74, "hrv": 43, "sleep_efficiency": 0.77, "total_sleep": 5.0, "steps": 9196, "subjective_stress": "med", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex29", "rhr": 70, "hrv": 39, "sleep_efficiency": 0.63, "total_sleep": 5.0, "steps": 6813, "subjective_stress": "high", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex30", "rhr": 70, "hrv": 73, "sleep_efficiency": 0.84, "total_sleep": 6.8, "steps": 4562, "subjective_stress": "high", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex31", "rhr": 59, "hrv": 64, "sleep_efficiency": 0.79, "total_sleep": 4.6, "steps": 9852, "subjective_stress": "med", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex32", "rhr": 77, "hrv": 74, "sleep_efficiency": 0.69, "total_sleep": 6.2, "steps": 3936, "subjective_stress": "med", "journal_text": "Slept great. Easy run planned."}
+{"id": "ex33", "rhr": 72, "hrv": 54, "sleep_efficiency": 0.87, "total_sleep": 6.0, "steps": 4854, "subjective_stress": "high", "journal_text": "Slept great. Easy run planned."}
+{"id": "ex34", "rhr": 80, "hrv": 35, "sleep_efficiency": 0.89, "total_sleep": 7.8, "steps": 4914, "subjective_stress": "low", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex35", "rhr": 66, "hrv": 66, "sleep_efficiency": 0.61, "total_sleep": 4.6, "steps": 5777, "subjective_stress": "med", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex36", "rhr": 61, "hrv": 64, "sleep_efficiency": 0.81, "total_sleep": 6.0, "steps": 13047, "subjective_stress": "med", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex37", "rhr": 57, "hrv": 34, "sleep_efficiency": 0.64, "total_sleep": 6.6, "steps": 6733, "subjective_stress": "low", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex38", "rhr": 74, "hrv": 77, "sleep_efficiency": 0.81, "total_sleep": 4.5, "steps": 11898, "subjective_stress": "med", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex39", "rhr": 76, "hrv": 27, "sleep_efficiency": 0.92, "total_sleep": 8.0, "steps": 13490, "subjective_stress": "low", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex40", "rhr": 60, "hrv": 47, "sleep_efficiency": 0.88, "total_sleep": 6.0, "steps": 13026, "subjective_stress": "med", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex41", "rhr": 67, "hrv": 67, "sleep_efficiency": 0.93, "total_sleep": 7.8, "steps": 3985, "subjective_stress": "low", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex42", "rhr": 59, "hrv": 57, "sleep_efficiency": 0.92, "total_sleep": 8.1, "steps": 3594, "subjective_stress": "high", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex43", "rhr": 76, "hrv": 79, "sleep_efficiency": 0.72, "total_sleep": 7.0, "steps": 3346, "subjective_stress": "low", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex44", "rhr": 80, "hrv": 66, "sleep_efficiency": 0.83, "total_sleep": 6.9, "steps": 3481, "subjective_stress": "med", "journal_text": "Slept great. Easy run planned."}
+{"id": "ex45", "rhr": 61, "hrv": 21, "sleep_efficiency": 0.69, "total_sleep": 5.8, "steps": 5140, "subjective_stress": "high", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex46", "rhr": 63, "hrv": 54, "sleep_efficiency": 0.75, "total_sleep": 5.1, "steps": 13322, "subjective_stress": "med", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex47", "rhr": 76, "hrv": 57, "sleep_efficiency": 0.89, "total_sleep": 6.8, "steps": 9419, "subjective_stress": "low", "journal_text": "Slept great. Easy run planned."}
+{"id": "ex48", "rhr": 71, "hrv": 52, "sleep_efficiency": 0.61, "total_sleep": 6.5, "steps": 4200, "subjective_stress": "high", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex49", "rhr": 79, "hrv": 71, "sleep_efficiency": 0.65, "total_sleep": 5.1, "steps": 11343, "subjective_stress": "high", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex50", "rhr": 72, "hrv": 23, "sleep_efficiency": 0.71, "total_sleep": 6.8, "steps": 10300, "subjective_stress": "med", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex51", "rhr": 72, "hrv": 23, "sleep_efficiency": 0.69, "total_sleep": 5.7, "steps": 13852, "subjective_stress": "low", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex52", "rhr": 72, "hrv": 21, "sleep_efficiency": 0.87, "total_sleep": 8.6, "steps": 8462, "subjective_stress": "med", "journal_text": "Slept great. Easy run planned."}
+{"id": "ex53", "rhr": 77, "hrv": 37, "sleep_efficiency": 0.76, "total_sleep": 6.9, "steps": 9032, "subjective_stress": "high", "journal_text": "Slept great. Easy run planned."}
+{"id": "ex54", "rhr": 77, "hrv": 53, "sleep_efficiency": 0.91, "total_sleep": 8.7, "steps": 5453, "subjective_stress": "high", "journal_text": "Slept great. Easy run planned."}
+{"id": "ex55", "rhr": 69, "hrv": 28, "sleep_efficiency": 0.75, "total_sleep": 6.3, "steps": 6377, "subjective_stress": "low", "journal_text": "Slept great. Easy run planned."}
+{"id": "ex56", "rhr": 68, "hrv": 24, "sleep_efficiency": 0.67, "total_sleep": 5.9, "steps": 3204, "subjective_stress": "low", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex57", "rhr": 59, "hrv": 36, "sleep_efficiency": 0.91, "total_sleep": 8.9, "steps": 4797, "subjective_stress": "high", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex58", "rhr": 67, "hrv": 76, "sleep_efficiency": 0.77, "total_sleep": 9.0, "steps": 4865, "subjective_stress": "low", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex59", "rhr": 71, "hrv": 45, "sleep_efficiency": 0.72, "total_sleep": 5.4, "steps": 6418, "subjective_stress": "low", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex60", "rhr": 55, "hrv": 41, "sleep_efficiency": 0.79, "total_sleep": 6.5, "steps": 1496, "subjective_stress": "med", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex61", "rhr": 71, "hrv": 59, "sleep_efficiency": 0.7, "total_sleep": 8.8, "steps": 3048, "subjective_stress": "low", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex62", "rhr": 57, "hrv": 36, "sleep_efficiency": 0.7, "total_sleep": 8.6, "steps": 4174, "subjective_stress": "med", "journal_text": "Slept great. Easy run planned."}
+{"id": "ex63", "rhr": 68, "hrv": 74, "sleep_efficiency": 0.92, "total_sleep": 8.2, "steps": 5437, "subjective_stress": "med", "journal_text": "Slept great. Easy run planned."}
+{"id": "ex64", "rhr": 72, "hrv": 78, "sleep_efficiency": 0.78, "total_sleep": 6.7, "steps": 6558, "subjective_stress": "low", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex65", "rhr": 56, "hrv": 71, "sleep_efficiency": 0.84, "total_sleep": 6.4, "steps": 2386, "subjective_stress": "med", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex66", "rhr": 75, "hrv": 25, "sleep_efficiency": 0.88, "total_sleep": 4.9, "steps": 4843, "subjective_stress": "low", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex67", "rhr": 58, "hrv": 49, "sleep_efficiency": 0.6, "total_sleep": 9.0, "steps": 8044, "subjective_stress": "med", "journal_text": "Slept great. Easy run planned."}
+{"id": "ex68", "rhr": 56, "hrv": 53, "sleep_efficiency": 0.85, "total_sleep": 8.7, "steps": 3845, "subjective_stress": "med", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex69", "rhr": 60, "hrv": 32, "sleep_efficiency": 0.93, "total_sleep": 7.3, "steps": 9901, "subjective_stress": "low", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex70", "rhr": 69, "hrv": 52, "sleep_efficiency": 0.84, "total_sleep": 5.7, "steps": 1497, "subjective_stress": "med", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex71", "rhr": 55, "hrv": 21, "sleep_efficiency": 0.86, "total_sleep": 7.0, "steps": 4304, "subjective_stress": "high", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex72", "rhr": 62, "hrv": 79, "sleep_efficiency": 0.76, "total_sleep": 7.5, "steps": 11851, "subjective_stress": "med", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex73", "rhr": 72, "hrv": 73, "sleep_efficiency": 0.91, "total_sleep": 8.9, "steps": 6242, "subjective_stress": "high", "journal_text": "Slept great. Easy run planned."}
+{"id": "ex74", "rhr": 62, "hrv": 41, "sleep_efficiency": 0.67, "total_sleep": 8.5, "steps": 13141, "subjective_stress": "high", "journal_text": "Slept great. Easy run planned."}
+{"id": "ex75", "rhr": 67, "hrv": 42, "sleep_efficiency": 0.94, "total_sleep": 8.3, "steps": 1433, "subjective_stress": "low", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex76", "rhr": 68, "hrv": 30, "sleep_efficiency": 0.62, "total_sleep": 7.5, "steps": 7440, "subjective_stress": "high", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex77", "rhr": 74, "hrv": 35, "sleep_efficiency": 0.84, "total_sleep": 4.7, "steps": 4236, "subjective_stress": "low", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex78", "rhr": 69, "hrv": 20, "sleep_efficiency": 0.69, "total_sleep": 8.8, "steps": 10163, "subjective_stress": "med", "journal_text": "Slept great. Easy run planned."}
+{"id": "ex79", "rhr": 56, "hrv": 76, "sleep_efficiency": 0.71, "total_sleep": 6.1, "steps": 1217, "subjective_stress": "med", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex80", "rhr": 57, "hrv": 50, "sleep_efficiency": 0.7, "total_sleep": 7.5, "steps": 5266, "subjective_stress": "high", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex81", "rhr": 57, "hrv": 36, "sleep_efficiency": 0.89, "total_sleep": 5.1, "steps": 10814, "subjective_stress": "low", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex82", "rhr": 55, "hrv": 39, "sleep_efficiency": 0.71, "total_sleep": 5.5, "steps": 10794, "subjective_stress": "high", "journal_text": "Slept great. Easy run planned."}
+{"id": "ex83", "rhr": 76, "hrv": 77, "sleep_efficiency": 0.85, "total_sleep": 8.5, "steps": 7581, "subjective_stress": "med", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex84", "rhr": 59, "hrv": 38, "sleep_efficiency": 0.85, "total_sleep": 7.4, "steps": 1917, "subjective_stress": "high", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex85", "rhr": 78, "hrv": 64, "sleep_efficiency": 0.88, "total_sleep": 5.1, "steps": 9781, "subjective_stress": "high", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex86", "rhr": 76, "hrv": 57, "sleep_efficiency": 0.88, "total_sleep": 7.7, "steps": 12559, "subjective_stress": "high", "journal_text": "Slept great. Easy run planned."}
+{"id": "ex87", "rhr": 57, "hrv": 21, "sleep_efficiency": 0.61, "total_sleep": 7.4, "steps": 2918, "subjective_stress": "med", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex88", "rhr": 72, "hrv": 23, "sleep_efficiency": 0.82, "total_sleep": 7.3, "steps": 12352, "subjective_stress": "low", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex89", "rhr": 63, "hrv": 20, "sleep_efficiency": 0.76, "total_sleep": 4.8, "steps": 9440, "subjective_stress": "high", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex90", "rhr": 76, "hrv": 53, "sleep_efficiency": 0.62, "total_sleep": 7.8, "steps": 5331, "subjective_stress": "low", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex91", "rhr": 62, "hrv": 66, "sleep_efficiency": 0.86, "total_sleep": 5.5, "steps": 11848, "subjective_stress": "med", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex92", "rhr": 67, "hrv": 24, "sleep_efficiency": 0.77, "total_sleep": 7.6, "steps": 13766, "subjective_stress": "low", "journal_text": "Slept great. Easy run planned."}
+{"id": "ex93", "rhr": 57, "hrv": 58, "sleep_efficiency": 0.65, "total_sleep": 5.6, "steps": 13376, "subjective_stress": "high", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex94", "rhr": 74, "hrv": 56, "sleep_efficiency": 0.65, "total_sleep": 6.7, "steps": 9159, "subjective_stress": "med", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex95", "rhr": 77, "hrv": 33, "sleep_efficiency": 0.84, "total_sleep": 5.8, "steps": 9662, "subjective_stress": "med", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex96", "rhr": 69, "hrv": 49, "sleep_efficiency": 0.87, "total_sleep": 9.0, "steps": 10196, "subjective_stress": "low", "journal_text": "Neck tension from laptop; skipped gym."}
+{"id": "ex97", "rhr": 57, "hrv": 79, "sleep_efficiency": 0.77, "total_sleep": 5.8, "steps": 2452, "subjective_stress": "high", "journal_text": "Late dinner; woke up twice. Could use a nap."}
+{"id": "ex98", "rhr": 63, "hrv": 44, "sleep_efficiency": 0.67, "total_sleep": 8.8, "steps": 4652, "subjective_stress": "low", "journal_text": "Felt groggy, short sleep. Lots of meetings."}
+{"id": "ex99", "rhr": 59, "hrv": 67, "sleep_efficiency": 0.78, "total_sleep": 8.8, "steps": 3372, "subjective_stress": "high", "journal_text": "Neck tension from laptop; skipped gym."}

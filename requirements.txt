@@ -1,0 +1,25 @@
+pydantic>=2.6
+python-dotenv
+jinja2
+pandas
+numpy
+scikit-learn
+matplotlib
+rouge-score
+bert-score
+openai>=1.30.0
+tqdm
+tenacity
+streamlit
+pyyaml
+regex
+guardrails-ai==0.5.0
+ray[data]==2.20.0
+pyarrow
+requests
+# optional local CPU inference while prototyping:
+transformers>=4.41.0
+torch>=2.2
+sentencepiece>=0.1
+# vLLM only installs on Linux:
+vllm==0.5.4 ; platform_system == "Linux"

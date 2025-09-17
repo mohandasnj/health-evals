@@ -1,0 +1,17 @@
+mut:                              # Llama-3 8B via Ollama
+  provider: "ollama"
+  model: "llama3:8b"
+  temperature: 0.6
+  max_tokens: 512
+  base_url: "http://localhost:11434"
+
+baseline:                         # keep as OpenAI OR also Ollama
+  provider: "openai"
+  model: "gpt-4o-mini"
+  temperature: 0.6
+  max_tokens: 512
+
+judge:                            # GPT-4 as judge (or gpt-4o-mini to save $)
+  provider: "openai"
+  model: "gpt-4o"
+  n_prompts: 3
