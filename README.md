@@ -81,6 +81,88 @@ python scripts/collect_ray_outputs.py out/ray/mut_v1 out/infer/mut_v1.ray.jsonl
 mv out/infer/mut_v1.ray.jsonl out/infer/mut_v1.jsonl
 python evals/runners/eval_llm_judge.py
 python evals/runners/eval_auto.py
+```
 
 ## Pipeline Overview
-<img width="1732" height="516" alt="image" src="https://github.com/user-attachments/assets/71a7953c-9d6a-4651-93a6-94a5f9ea174d" />
+
+![alt text]()
+
+## Providers Abstraction
+
+## End-to-End Run
+
+## Key Files
+
+configs/model.yaml — single source of truth for models & providers (MUT, baseline, judge)
+
+configs/judge.yaml — rubric dimensions, weights, scale
+
+apps/providers.py — provider abstraction (Ollama/OpenAI/vLLM) with retries
+
+apps/wellness_coach/schemas.py — Pydantic (v2) schema used by Guardrails
+
+apps/wellness_coach/prompt_templates/coach_v1.jinja — JSON-only prompt (MUT)
+
+apps/wellness_coach/prompt_templates/coach_v2.jinja — coachable/motivational variant (Baseline)
+
+evals/runners/batch_infer.py — renders → calls providers → validates → writes out/infer/
+
+evals/runners/eval_llm_judge.py — rubric scoring with self-consistency → out/judged/
+
+evals/runners/eval_auto.py — deterministic safety/quality checks → out/metrics/
+
+evals/runners/ray_eval.py — scalable parallel inference (MUT)
+
+scripts/refs_from_judge.py — builds silver references with the judge
+
+evals/runners/eval_ref_metrics.py — ROUGE-L, BERTScore, embedding cosine, PPL → out/metrics_ref/
+
+human/annotator_app.py — Streamlit blind A/B + Likert + error tags → out/human/
+
+scripts/analyze_human_eval.py — aggregates human ratings
+
+## Results
+
+Look at the files in the out folder corresponding to each statistic. I only put a small test of 5 entries, but there are about 300 entries of test data total. From this small sample, the results show that GPT-4o-mini performs a bit better than Ollama. There could be bias here as well because the judge is another OpenAI model. Further research can be done with different models for both the MUT, baseline, and judge. 
+
+## Streamlit Demo
+
+To run: streamlit run human/annotator_app.py
+
+![alt text]()
+![alt text]()
+
+## 🧠 Methods implemented (and evidence)
+
+LLM-as-Judge with self-consistency
+
+  Code: evals/runners/eval_llm_judge.py, configs/judge.yaml
+  
+  Output: out/judged/*.jl
+  
+Automatic metric-based evals
+  
+  Heuristics: evals/runners/eval_auto.py → out/metrics/*.csv
+
+  Text metrics: evals/runners/eval_ref_metrics.py → out/metrics_ref/*.csv
+  (ROUGE-L, BERTScore-F1, embedding cosine, optional PPL)
+
+Human evaluation (blind A/B, Likert, error tags)
+  
+  UI: human/annotator_app.py (Streamlit), data: out/human/annotations.csv
+
+  Aggregation: scripts/analyze_human_eval.py
+
+Scalability
+
+  Parallel inference: evals/runners/ray_eval.py, shards merged via scripts/collect_ray_outputs.py
+
+Guardrails + schema enforcement
+
+  Pydantic v2 schema: apps/wellness_coach/schemas.py
+
+  JSON-only prompts: apps/wellness_coach/prompt_templates/*.jinja
+
+## 🧭 Next Steps (roadmap)
+
+
