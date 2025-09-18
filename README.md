@@ -169,167 +169,43 @@ Images of App below:
 
 LLM-as-Judge with self-consistency
 
-  Code: evals/runners/eval_llm_judge.py, configs/judge.yaml
+  * Code: evals/runners/eval_llm_judge.py, configs/judge.yaml
   
-  Output: out/judged/*.jl
+  * Output: out/judged/*.jl
   
 Automatic metric-based evals
   
-  Heuristics: evals/runners/eval_auto.py → out/metrics/*.csv
+  * Heuristics: evals/runners/eval_auto.py → out/metrics/*.csv
 
-  Text metrics: evals/runners/eval_ref_metrics.py → out/metrics_ref/*.csv
+  * Text metrics: evals/runners/eval_ref_metrics.py → out/metrics_ref/*.csv
   (ROUGE-L, BERTScore-F1, embedding cosine, optional PPL)
 
 Human evaluation (blind A/B, Likert, error tags)
   
-  UI: human/annotator_app.py (Streamlit), data: out/human/annotations.csv
+  * UI: human/annotator_app.py (Streamlit), data: out/human/annotations.csv
 
-  Aggregation: scripts/analyze_human_eval.py
+  * Aggregation: scripts/analyze_human_eval.py
 
 Scalability
 
-  Parallel inference: evals/runners/ray_eval.py, shards merged via scripts/collect_ray_outputs.py
+  * Parallel inference: evals/runners/ray_eval.py, shards merged via scripts/collect_ray_outputs.py
 
 Guardrails + schema enforcement
 
-  Pydantic v2 schema: apps/wellness_coach/schemas.py
+  * Pydantic v2 schema: apps/wellness_coach/schemas.py
 
-  JSON-only prompts: apps/wellness_coach/prompt_templates/*.jinja
+  * JSON-only prompts: apps/wellness_coach/prompt_templates/*.jinja
 
-## 🚦 Next Steps / Roadmap
+## 🚦 Next Steps / Roadmap (high level goals)
 
-> This roadmap lays out concrete upgrades to take the system from a toy wellness-coach eval to a rigorous, health-grounded evaluation platform.  
-> Items marked **✅ Foundation exists** point to code that already covers part of the work in this repo.
+Use health-grounded datasets — Add consumer-safe subsets of MultiMedQA, HealthSearchQA, long-form QA; introduce MedSafetyBench-style categories and a curated wellness-coach suite.
 
----
+Strengthen human annotation — Turn the Streamlit app into a rater console with gold items, attention checks, adjudication, and QC reporting (IRR, drift).
 
-### 1) Replace toy prompts with **health-grounded tasks + datasets**
+Improve judge trustworthiness — Increase self-consistency, make prompts style-blind, and run meta-evaluation against human ratings (correlations & overlap).
 
-**Goals**
-- Evaluate on consumer-facing health questions and long-form coaching aligned with public benchmarks.
+Health safety & alignment — Ship a safety rubric (no diagnosis/dosing, escalation rules) and add automatic policy filters & red-team generators with tracked safety rates.
 
-**Datasets & Tasks (consumer-safe subsets only)**
-- **MultiMedQA**: MedQA, MedMCQA, PubMedQA, MMLU-clinical *(for consumer-interpretable items only)*  
-- **HealthSearchQA**: consumer health search questions  
-- **Long-form medical QA** benchmarks evaluating LLM-judge vs clinicians *(use consumer-appropriate items; clinician review where needed)*  
-- **MedSafetyBench**: safety failure modes (don’t ship content; implement and **report** rubric categories)  
-- **Custom Wellness-Coach Suite**: sleep hygiene, stress/mindfulness, activity, nutrition — with constraints (meds, comorbidities, pregnancy, age). Map each item to rubric dimensions: **safety, accuracy, personalization, actionability, empathy**.
-
-**Implementation plan**
-- [ ] Add dataset loaders under `data_loaders/` (e.g., `multimedqa.py`, `healthsearchqa.py`).
-- [ ] Create **task-specific** prompt templates under `apps/wellness_coach/prompt_templates/health_*`.
-- [ ] Add task configs in `configs/tasks/*.yaml` (dataset → prompt → judge rubric).
-- [ ] Update runners to accept `--task-config` (route to loaders/templates automatically).
-- [ ] Produce per-task reports in `out/reports/<task>/...`.
-
-**Deliverables**
-- Per-task judged scores, auto metrics, ref metrics; CSVs + small markdown summaries.
-- A `tasks/README.md` documenting data filters and consumer-safety criteria.
-
-**✅ Foundation exists**
-- Prompt templating: `apps/wellness_coach/prompt_templates/*`  
-- Provider abstraction and runners: `apps/providers.py`, `evals/runners/*`  
-- Metrics: `evals/runners/eval_llm_judge.py`, `evals/runners/eval_auto.py`, `evals/runners/eval_ref_metrics.py`
-
----
-
-### 2) Build the **human-annotation system** (rater console & QC)
-
-**Goals**
-- Turn the simple Streamlit app into a full **rater workflow** with quality control and provenance.
-
-**Features**
-- **Blind A/B** with randomization; rubric sliders (Likert) + categorical checks.
-- **Gold-item injection** and **attention checks**; interleaved **re-ratings** for test–retest reliability.
-- **Adjudication flow** for conflicts.
-- **Annotator Guide (PDF)** and **QC report** (rater drift, gold pass rates, disagreement heatmaps).
-- **Provenance logging**: prompt hash, model+version, judge version, rubric version, task id, slice tags.
-
-**Implementation plan**
-- [ ] Extend `human/annotator_app.py` with login, assignment, progress, and QC widgets.  
-- [ ] Add `human/schema.py` for a stable rating schema; write to `out/human/ratings.jsonl`.  
-- [ ] Build `scripts/qc_humans.py` for drift, gold pass, IRR (Cohen’s κ / Krippendorff’s α).  
-- [ ] Generate `docs/annotator_guide.pdf` and `docs/qc_report.md` automatically.
-
-**Deliverables**
-- A reproducible human-ratings dataset with QC metrics and IRR.
-- A short “How to rate” guide for raters.
-
-**✅ Foundation exists**
-- Seed app: `human/annotator_app.py` and aggregation: `scripts/analyze_human_eval.py`  
-- Pair builder: `scripts/prepare_human_eval.py`
-
----
-
-### 3) Make **LLM-as-Judge** trustworthy
-
-**Goals**
-- Improve judge robustness and quantify agreement with humans.
-
-**Upgrades**
-- Increase **self-consistency** to N>3; **rubric-constrained** judge prompts; **style-blind** judging (strip brand cues and system names).
-- **Meta-evaluation**: correlation with human ratings (Pearson/Spearman), error overlap analysis, judge sensitivity to paraphrase; report CIs via bootstrap.
-- Maintain **judge versions** and **rubric versions**; pin judge model in `configs/judge.yaml`.
-
-**Implementation plan**
-- [ ] Add preprocessor: `evals/judge_pre.py` (normalize outputs, strip brand cues).  
-- [ ] Add `--n-judge-prompts` flag and prompt pool in `configs/judge.yaml`.  
-- [ ] Script `scripts/compare_judge_vs_human.py` to compute correlations and sensitivity.
-
-**Deliverables**
-- A judge reliability report: r with human, sensitivity analysis, and variance under paraphrase.
-
-**✅ Foundation exists**
-- Current judge with N=3 and rubrics: `evals/runners/eval_llm_judge.py`, `configs/judge.yaml`
-
----
-
-### 4) Health-specific safety & alignment (**non-negotiable**)
-
-**Goals**
-- Codify health safety constraints into both **rubrics** and **automatic guards**.
-
-**Safety rubric (must check)**
-- No diagnosis, no dosing, no treatment plans.  
-- Crisis escalation & when to seek care.  
-- Source grounding expectations.  
-- Contraindication awareness (pregnancy, chest pain, drug interactions).
-
-**Automatic guards**
-- [ ] Expand `evals/runners/eval_auto.py` with policy filters & escalation checks.  
-- [ ] Add **red-team generators** targeting risks (drug interactions, eating disorders, pediatrics).  
-- [ ] Track **unsafe-advice rate**, **missing escalation rate**, **hallucination rate** by task & slice.
-
-**Deliverables**
-- `configs/safety_rubric.yaml` and a safety metrics dashboard per task.
-- A short **Safety Readiness** summary for each release.
-
-**✅ Foundation exists**
-- Deterministic checks & disclaimer compliance: `evals/runners/eval_auto.py`  
-- Schema & JSON-only prompts: `apps/wellness_coach/schemas.py`, `apps/wellness_coach/prompt_templates/*`
-
----
-
-### 5) Failure analysis & adversarial testing
-
-**Goals**
-- Systematically study failure modes and protect against regressions.
-
-**Failure analysis**
-- [ ] Notebook `notebooks/failure_analysis.ipynb`: cluster bad cases; tag types (unsafe, incorrect, generic, non-actionable, off-policy).  
-- [ ] Mine exemplars with links back to `out/infer/*` and judge logs.
-
-**Adversarial sets**
-- [ ] Create `evals/datasets/adversarial.jsonl`: prompt injection (“doctor said…”), contradictory symptoms, ambiguous ages, medication traps.  
-- [ ] Track performance over time; add to CI smoke tests.
-
-**Deliverables**
-- A “Top Failures” report with representative cases and suggested mitigations.
-- A small adversarial benchmark run in every PR via GitHub Actions.
-
-**✅ Foundation exists**
-- All artifacts are JSONL/CSV for easy slicing: `out/infer/*`, `out/judged/*`, `out/metrics/*`
-
----
+Failure analysis & adversarial — Cluster bad cases, label failure types, and maintain a small adversarial suite to catch regressions.
 
 
