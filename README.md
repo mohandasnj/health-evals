@@ -143,7 +143,7 @@ Human Evaluation
 
 ## Results
 
-Look at the files in the o'ut' folder corresponding to each statistic. I only put a small test of 5 entries, but there are about 300 entries of test data total. From this small sample, the results show that GPT-4o-mini performs a bit better than Ollama. There could be bias here as well because the judge is another OpenAI model. Further research can be done with different models for both the LLM, baseline, and judge. 
+Look at the files in the 'out' folder corresponding to each statistic. I only put a small test of 5 entries, but there are about 300 entries of test data total. From this small sample, the results show that GPT-4o-mini performs a bit better than Ollama. There could be bias here as well because the judge is another OpenAI model. Further research can be done with different models for both the LLM, baseline, and judge. 
 
 Example output for metrics from Judge LLM:
 
