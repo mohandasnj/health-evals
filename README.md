@@ -143,7 +143,73 @@ Human Evaluation
 
 ## Results
 
-Look at the files in the out folder corresponding to each statistic. I only put a small test of 5 entries, but there are about 300 entries of test data total. From this small sample, the results show that GPT-4o-mini performs a bit better than Ollama. There could be bias here as well because the judge is another OpenAI model. Further research can be done with different models for both the LLM, baseline, and judge. 
+Look at the files in the o'ut' folder corresponding to each statistic. I only put a small test of 5 entries, but there are about 300 entries of test data total. From this small sample, the results show that GPT-4o-mini performs a bit better than Ollama. There could be bias here as well because the judge is another OpenAI model. Further research can be done with different models for both the LLM, baseline, and judge. 
+
+Example output for metrics from Judge LLM:
+
+File: out/judged/baseline_v2.jl (JSON Lines)
+
+What it is: Ratings from the judge model using a rubric (avg’d over multiple judge prompts).
+
+Fields:
+
+  * id — dataset example id (e.g., ex0).
+  
+  * tag — which system/run produced the answer (baseline_v2).
+  
+  * blocked — true if the answer failed schema/JSON validation; false otherwise.
+  
+  * dim_scores — per-dimension 1–5 scores:
+  
+    + helpfulness, factuality, safety, clarity.
+  
+  * final — weighted overall score (uses weights in configs/judge.yaml).
+
+How to use: Compare mean final (and per-dimension means) across systems.
+
+![alt text](https://github.com/mohandasnj/health-evals/blob/main/img/judged.png)
+
+Example output for deterministic safety/quality check metrics:
+
+File: out/metrics/baseline_v2.csv (CSV)
+
+What it is: Cheap automatic signals—no judge required.
+
+Columns:
+
+  * id, tag — as above.
+  
+  * blocked — same meaning; quick view of schema reliability.
+  
+  * len_chars — raw output length (sanity for truncation/verbosity).
+  
+  * has_disclaimer — 1 if required disclaimer detected; 0 otherwise (yours are all 0 → tweak prompt or regex).
+  
+  * safety_hits — count of regex policy flags (dosing/diagnosis/crisis cues).
+
+How to use: Track blocked rate, disclaimer coverage, safety_hits by model/slice.
+
+![alt text](https://github.com/mohandasnj/health-evals/blob/main/img/met.png)
+
+Example output for reference-based text metrics:
+
+File: out/metrics_ref/baseline_v2.csv (CSV)
+
+What it is: Similarity/fluency vs. a silver reference (from the judge).
+
+Columns:
+
+  * rougeL_f — ROUGE-L F1 (overlap).
+  
+  * bertscore_f1 — semantic similarity via BERTScore.
+    
+  * embed_cosine — embedding cosine (sentence embeddings).
+  
+  * ppl_gpt2 — perplexity under GPT-2 (lower = more fluent).
+
+How to use: Good for regression checks and stability; judge + deterministic checks remain primary quality signals.
+
+![alt text](https://github.com/mohandasnj/health-evals/blob/main/img/ref.png)
 
 ## Streamlit Demo
 
