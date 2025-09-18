@@ -153,13 +153,15 @@ How to run:
 streamlit run human/annotator_app.py
 ```
 
-Home — choose a dataset and a model pair (labels are masked so raters are blind).
+What we are looking at:
 
-Rating View — side-by-side model outputs with the JSON rendered into readable sections (summary, suggestions, steps, disclaimer). Raters provide Likert scores per rubric dimension and tag errors (e.g., unsafe, non-actionable).
-
-Submit & Persist — ratings are appended to out/human/annotations.csv with provenance (example id, pair id, timestamp).
-
-Aggregate — use scripts/analyze_human_eval.py to summarize rater agreement and winner rates.
+  * Home: Choose a dataset and a model pair (labels are masked so raters are blind).
+  
+  * Rating View: Side-by-side model outputs with the JSON rendered into readable sections (summary, suggestions, steps, disclaimer). Raters provide Likert scores per rubric dimension and tag errors (e.g., unsafe, non-actionable).
+  
+  * Submit & Persist: Ratings are appended to out/human/annotations.csv with provenance (example id, pair id, timestamp).
+  
+  * Aggregate: Use scripts/analyze_human_eval.py to summarize rater agreement and winner rates.
 
 Images of App below:
 ![alt text](https://github.com/mohandasnj/health-evals/blob/main/img/streamlit1.png)
@@ -198,14 +200,19 @@ Guardrails + schema enforcement
 
 ## 🚦 Next Steps / Roadmap (high level goals)
 
-Use health-grounded datasets — Add consumer-safe subsets of MultiMedQA, HealthSearchQA, long-form QA; introduce MedSafetyBench-style categories and a curated wellness-coach suite.
+* Use health-grounded datasets
+  + Add consumer-safe subsets of MultiMedQA, HealthSearchQA, long-form QA; introduce MedSafetyBench-style categories and a curated wellness-coach suite.
 
-Strengthen human annotation — Turn the Streamlit app into a rater console with gold items, attention checks, adjudication, and QC reporting (IRR, drift).
+* Strengthen human annotation
+  + Turn the Streamlit app into a rater console with gold items, attention checks, adjudication, and QC reporting (IRR, drift).
 
-Improve judge trustworthiness — Increase self-consistency, make prompts style-blind, and run meta-evaluation against human ratings (correlations & overlap).
+* Improve judge trustworthiness
+  + Increase self-consistency, make prompts style-blind, and run meta-evaluation against human ratings (correlations & overlap).
 
-Health safety & alignment — Ship a safety rubric (no diagnosis/dosing, escalation rules) and add automatic policy filters & red-team generators with tracked safety rates.
+* Health safety & alignment
+  + Ship a safety rubric (no diagnosis/dosing, escalation rules) and add automatic policy filters & red-team generators with tracked safety rates.
 
-Failure analysis & adversarial — Cluster bad cases, label failure types, and maintain a small adversarial suite to catch regressions.
+* Failure analysis & adversarial
+  + Cluster bad cases, label failure types, and maintain a small adversarial suite to catch regressions.
 
 
