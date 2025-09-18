@@ -16,7 +16,7 @@
 
 ---
 
-## 🔎 What this repo does (in plain English)
+## 🔎 What this repo does
 
 You give the system a set of daily signals (e.g., RHR/HRV/sleep/steps + a journal snippet).  
 It **prompts** two models (MUT & Baseline) with *the same coaching task*, **forces JSON** outputs that match a Pydantic schema (summary → suggestions → steps → disclaimer), then **scores** the results with:
@@ -82,5 +82,5 @@ mv out/infer/mut_v1.ray.jsonl out/infer/mut_v1.jsonl
 python evals/runners/eval_llm_judge.py
 python evals/runners/eval_auto.py
 
-# Pipeline Overview
+## Pipeline Overview
 <img width="1732" height="516" alt="image" src="https://github.com/user-attachments/assets/71a7953c-9d6a-4651-93a6-94a5f9ea174d" />
