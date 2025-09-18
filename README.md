@@ -85,7 +85,7 @@ python evals/runners/eval_auto.py
 
 ## Pipeline Overview
 
-![alt text]()
+![alt text](https://github.com/mohandasnj/health-evals/blob/main/img/pipeline.png)
 
 ## Providers Abstraction
 
@@ -129,8 +129,8 @@ Look at the files in the out folder corresponding to each statistic. I only put 
 
 To run: streamlit run human/annotator_app.py
 
-![alt text]()
-![alt text]()
+![alt text](https://github.com/mohandasnj/health-evals/blob/main/img/streamlit1.png)
+![alt text](https://github.com/mohandasnj/health-evals/blob/main/img/streamlit2.png)
 
 ## 🧠 Methods implemented (and evidence)
 
